@@ -1,0 +1,11 @@
+[project]
+name = "dynamic-hash-check"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+"python-dotenv",
+"requests",
+"qbittorrent-api==2025.11.1" # qbittorrent v5.14 is the host version
+]

@@ -1,0 +1,4 @@
+
+python-dotenv
+requests
+qbittorrent-api==2025.11.1

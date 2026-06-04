@@ -9,7 +9,9 @@ from dotenv import dotenv_values
 
 from src import CONFIG_PATH
 
-QBIT_CONFIG: dict[str, str | None] = dotenv_values(dotenv_path=CONFIG_PATH / ".env.qbit")
+QBIT_CONFIG: dict[str, str | None] = dotenv_values(
+    dotenv_path=CONFIG_PATH / ".env.qbit"
+)
 
 # instantiate a Client using the appropriate WebUI configuration
 QBT_CLIENT = qbittorrentapi.Client(
@@ -93,6 +95,8 @@ def get_trackers(hash_v: str) -> set[str]:
     """
     trackers: set[str] = set()
     with QBT_CLIENT as qc:
-        trackers = {cast(str, tkr["url"]) for tkr in qc.torrents_trackers(torrent_hash=hash_v)}
+        trackers = {
+            cast(str, tkr["url"]) for tkr in qc.torrents_trackers(torrent_hash=hash_v)
+        }
 
     return trackers

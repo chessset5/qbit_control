@@ -12,9 +12,9 @@ from typing import cast
 import requests
 from dotenv import dotenv_values
 
-from src import CONFIG_PATH, DATA_PATH
+from src import CONFIG_PATH, DATA_FOLDER
 
-NEKOBT_DATA_PATH: Path = DATA_PATH / "nekobt data"
+NEKOBT_DATA_PATH: Path = DATA_FOLDER / "nekobt data"
 NEKOBT_DATA_PATH.mkdir(exist_ok=True)
 
 NEKOBT_CONFIG: dict[str, str | None] = dotenv_values(

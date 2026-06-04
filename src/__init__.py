@@ -6,7 +6,7 @@ STR_PP = str(PROJECT_PATH)  # String Project Path
 if STR_PP not in sys.path:
     sys.path.insert(0, STR_PP)
 
-DATA_PATH: Path = PROJECT_PATH / "data"
-DATA_PATH.mkdir(exist_ok=True)
+DATA_FOLDER: Path = PROJECT_PATH / "data"
+DATA_FOLDER.mkdir(exist_ok=True)
 CONFIG_PATH: Path = PROJECT_PATH / "config"
 CONFIG_PATH.mkdir(exist_ok=True)

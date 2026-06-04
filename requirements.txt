@@ -1,4 +1,8 @@
 
 python-dotenv
 requests
-qbittorrent-api==2025.11.1
+
+# qbittorrent v5.14 is the host version
+# update the below to the corrent version
+qbittorrent-api
+

@@ -7,5 +7,5 @@ requires-python = ">=3.12"
 dependencies = [
 "python-dotenv",
 "requests",
-"qbittorrent-api==2025.11.1" # qbittorrent v5.14 is the host version
+"qbittorrent-api" # qbittorrent v5.14 is the host version
 ]

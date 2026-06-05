@@ -5,7 +5,35 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-"python-dotenv",
-"requests",
-"qbittorrent-api" # qbittorrent v5.14 is the host version
+    "python-dotenv",
+    "requests",
+    "qbittorrent-api", # qbittorrent v5.14 is the host version
 ]
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$'
+extend-exclude = '''
+# A regex preceded by a tilde matches files or directories in addition to the
+# default hack-list.
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true

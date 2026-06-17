@@ -13,7 +13,7 @@ STR_PP = str(PROJECT_PATH)  # String Project Path
 if STR_PP not in sys.path:
     sys.path.insert(0, STR_PP)
 
-from src import runner
+from src import runner  # noqa
 
 
 def main() -> None:

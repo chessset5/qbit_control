@@ -3,9 +3,9 @@ grabs the data from the qbit client
 
 """
 
+import json
 from pathlib import Path
 from typing import Any
-import json
 
 from src import DATA_FOLDER
 from src.helpers.qbit import QBT_CLIENT
